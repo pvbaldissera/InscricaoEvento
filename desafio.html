@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Evento on-line de Programação</h2>
+<p>Seja bem-vindo !</p>
+
+<p>Realize a sua inscrição !</p>
+
+<script>
+
+let nome = new Array(100);
+let idade = new Array(100);
+
+const hoje = new Date();
+const evento = new Date();
+evento.setFullYear(2023, 0, 14);
+
+if (hoje <= evento)
+{
+        for (i = 0; i < 100; i++)
+        {
+                idade[i] = prompt("Entre com a idade: ");
+                if (idade[i] >= 18)
+                 {
+                  nome[i] = prompt("Escreva o seu nome: ");
+                  
+                 }else{
+                  document.write("Inscrição não efetuada" + "<br>");
+		 }
+        }
+}else{
+  document.write("Data da Inscrição acabou" + "<br>");
+}
+ 
+document.write("-------------------------------------" + "<br>");	
+document.write("Evento: Programação" + "<br>");
+document.write("Palestrante: Linus Torvalds" + "<br>");
+document.write("Lista de participantes: " + "<br>");  
+
+for (i = 0; i < 100; i++)
+ {
+  if (idade[i] >= 18)
+   {
+    document.write(`${nome[i]} ----- ${idade[i]} anos` + "<br>");
+   }
+ }
+
+</script>
+
+</body>
+</html> 
+
